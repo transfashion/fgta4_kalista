@@ -1,0 +1,73 @@
+{
+
+	"title": "home",
+	"modules": [
+
+		"retail/sales/promoab",
+		
+		{
+			"title": "Merchandise",
+			"modules" : [
+				{
+					"title" : "Master",
+					"modules" : [
+						"ent/affiliation/brand",
+						"retail/master/merchitemgro",
+						"retail/master/merchitemctg",
+						"retail/master/mercharticle",
+						"retail/master/merchitem",
+						"finact/items/itemstock"
+					]
+				},
+				"retail/merch/merchreg",
+				"retail/merch/merchorderout",
+				"retail/merch/merchrv",
+
+
+				"retail/sales/merchorderin"
+				
+			]
+		},	
+		{
+			"title": "Setup",
+			"modules" : [
+				"fgta/framework/fgoptionlist",
+				"fgta/framework/fgsetting",
+				"ent/affiliation/partner",
+				"ent/organisation/unit"
+			]
+		},	
+		{
+			"title" : "Finance Akunting",
+			"modules" : [
+				"finact/master/periodemo",
+				"finact/master/coagroup",
+				"finact/master/coa",
+				"finact/master/jurnalsource",
+				"finact/master/jurnaltype",
+				{"program":"finact/acct/jurnal",  "variancename":"entry"},
+				{"program":"finact/acct/jurnal",  "variancename":"posting"},
+				{"program":"finact/acct/jurnal",  "variancename":"unposting"},
+				{"program":"finact/acct/jurnal",  "variancename":"link"},
+				{"program":"finact/acct/jurnal",  "variancename":"unlink"},
+				"finact/acct/rptledgertrial",
+				"finact/acct/rptledgersummary",
+				"finact/acct/rptledgerlapkeu",
+				"finact/acct/rptaging"
+			]
+		},
+		{
+			"title" : "Logistic",
+			"modules" : [
+				"retail/master/merchshipbudgetacc",
+				"retail/merch/merchship",
+				"retail/merch/merchrv",
+				"retail/merch/merchbillin"
+			]
+		}
+
+
+
+	]
+	
+}
