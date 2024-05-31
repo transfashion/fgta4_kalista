@@ -29,6 +29,9 @@ class GetRoute extends Route {
 
 	public $debugoutput = false;
 	
+
+	protected $reqinfo;
+
 	private $mode = "";
 	private $PRG = null;
 	private $result = null;

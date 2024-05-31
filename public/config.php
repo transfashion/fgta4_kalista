@@ -2,7 +2,7 @@
 
 define('DB_CONFIG', [
 	'FGTACLOUD' => [
-		'DSN' => "mysql:host=fgtadb;dbname=fgtadb",
+		'DSN' => "mysql:host=fgta4db;dbname=tfimpordblocal",
 		'user' => "root",
 		'pass' => ""
 	],
@@ -18,6 +18,7 @@ define('DB_CONFIG', [
 
 ]);
 
+define('__LOCAL_CURR', 'IDR');
 
 
 $GLOBALS['MAINDB'] = 'FGTACLOUD';

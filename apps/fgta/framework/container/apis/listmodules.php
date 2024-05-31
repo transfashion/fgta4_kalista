@@ -12,6 +12,9 @@ use FGTA4\exceptions\WebException;
 
 class ListModules extends WebAPI {
 
+
+	protected $debugoutput;
+
 	function __construct() {
 		$this->debugoutput = true;
 		// switch (__APPNAME) {
@@ -173,6 +176,16 @@ class ModuleIcon {
 
 class ModuleGroup extends ModuleIcon  {
 	public $type = "modulegroup";
+	public $_id;
+	public $db;
+	public $title;
+	public $icon;
+	public $forecolor;
+	public $backcolor;
+	public $allowedgroups;
+	public $disabled;
+	public $MODULES;
+
 	function __construct($modulegroup, $userdata) {
 
 		$this->title = array_key_exists('title', $modulegroup) ? $modulegroup['title'] : 'modules group';
@@ -187,8 +200,19 @@ class ModuleGroup extends ModuleIcon  {
 
 class ModuleShorcut extends ModuleIcon {
 	public $type = "module";
+	public $_id;
+	public $db;
+	public $title;
+	public $icon;
+	public $forecolor;
+	public $backcolor;
+	public $allowedgroups;
+	public $disabled;
+	public $variancename;
 
 	private $userdata;
+	private $modulefullname;
+	private $url_param;
 
 	function __construct($modulefullname, $userdata, $variancename=null) {
 		$this->userdata = $userdata;

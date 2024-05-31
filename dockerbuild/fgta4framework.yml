@@ -3,7 +3,7 @@ version: '3.9'
 services:
   fgta4framework:
     container_name: fgta4framework
-    image: webserver_8_2
+    image: webserver_8_1
     hostname: fgta4framework
     ports:
       - 8001:80

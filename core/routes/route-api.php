@@ -28,6 +28,13 @@ use \FGTA4\WebSession;
  */
 class ApiRoute extends Route {
 
+	protected $api_class;
+	protected $api_method;
+	protected $api_params;
+	protected $api_executingparameters;
+	protected $API;
+
+
 	private mixed $result;
 	private object $reqinfo;
 	private ?object $auth = null;

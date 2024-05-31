@@ -18,6 +18,14 @@ use \FGTA4\utils\SqlUtility;
 
 class WebAPI extends \FGTA4\WebProg {
 	
+	public $configuration;
+	public $auth;
+	public $reqinfo;
+
+	protected $db;
+	
+
+
 	public function ActionIsAllowedFor($api_info, $user_owned_groups) {
 	
 		try {
