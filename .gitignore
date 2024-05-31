@@ -5,3 +5,4 @@ rootdir
 vendor
 .DS_Store
 .vscode
+localsetting

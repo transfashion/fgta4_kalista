@@ -1,7 +1,12 @@
 {
 	"folders": [
 		{
-			"path": "."
+			"path": ".",
+			"name" : "Framework"	
+		},
+		{
+			"path": "./localsetting",
+			"name" : "Local Setting"	
 		}
 	],
 	"settings": {
