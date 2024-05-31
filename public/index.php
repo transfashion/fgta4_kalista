@@ -99,7 +99,7 @@ require_once __ROOT_DIR.'/core/webauth.php';
 require_once __ROOT_DIR.'/core/webmoduleconfig.php';
 require_once __ROOT_DIR.'/core/errorpage.php';
 require_once __ROOT_DIR.'/core/routes/route.php';
-require_once __ROOT_DIR.'/core/vendor/autoload.php';
+require_once __ROOT_DIR.'/vendor/autoload.php';
 
 
 use \FGTA4\setting;
