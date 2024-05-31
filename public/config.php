@@ -18,6 +18,7 @@ define('DB_CONFIG', [
 
 ]);
 
+// local currency setting
 define('__LOCAL_CURR', 'IDR');
 
 
