@@ -14,6 +14,21 @@ class WebModuleConfig {
 	public static $DefaultModulegroupBackgroundColor = "";
 
 
+	public $title;
+	public $isloginpage;
+	public $variance;
+	public $main;
+	public $allowanonymous;
+	public $allowedgroups;
+	public $disabled;
+	public $icon;
+	public $forecolor;
+	public $backcolor;
+	public $data;
+	public $apis;
+	public $get;
+
+
 	function __construct($moduleconfigpath, $ovr=false) {
 		if (!is_file($moduleconfigpath)) {
 			throw new WebException("File config '$moduleconfigpath' tidak ditemukan", 500);		
