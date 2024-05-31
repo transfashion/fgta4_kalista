@@ -8,7 +8,13 @@ require_once __DIR__ . '/webprog.php';
 
 class WebModule extends \FGTA4\WebProg {
 
-
+	public $configuration;
+	public $reqinfo;
+	public $title;
+	public $urlparams;
+	public $author;
+	public $createdate;
+	public $auth;
  
 
     public function __call($method, $args)

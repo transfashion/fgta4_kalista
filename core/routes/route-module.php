@@ -18,6 +18,9 @@ use \FGTA4\WebAuth;
 
 class ModuleRoute extends Route {
 
+
+	public $MODULE;
+
 	private static ?object $reqinfo;
 
 
