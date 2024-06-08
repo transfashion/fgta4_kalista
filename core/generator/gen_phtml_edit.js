@@ -206,12 +206,19 @@ module.exports = async (fsd, genconfig) => {
 					$maxlengdcr = `maxlength="${type.maxlength}"`
 				}
 
+				const regex = /multiline: true/s;
+				const hasMultiline = regex.test(stroptions);
+
+				let _style = 'width: 400px';
+				if (hasMultiline) {
+					_style += '; height: 180px;';
+				}
 
 				formcomp_script += `
 		<div ${varid}class="form_row pnl_edit_row${additionalclass}" ${formrowstyle}>
 			<div class="form_label_col${labeltipsclass}" ${tipshidden} style="border: 0px solid black; vertical-align: top; margin-top: 7px;">${labeltext}</div>
 			<div class="form_input_col" style="border: 0px solid black">
-				<input id="pnl_edit-${prefix}${fieldname}" class="${compclass}" mapping="${fieldname}" ${settouppercase} ${$maxlengdcr} style="width: 400px" data-options="multiline: false ${stroptions} ">
+				<input id="pnl_edit-${prefix}${fieldname}" class="${compclass}" mapping="${fieldname}" ${settouppercase} ${$maxlengdcr} style="${_style}" data-options="prompt: '${labeltext}' ${stroptions} ">
 				<div style="margin-top: 3px; margin-bottom: 5px; font-size: 0.75em; font-style: italic; color:#54381d;">${tipsvisible}</div>
 			</div>
 		</div>\r\n`	
