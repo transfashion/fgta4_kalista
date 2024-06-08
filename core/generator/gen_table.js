@@ -16,7 +16,7 @@ const colFgBlack = "\x1b[30m"
 const colBright = "\x1b[1m"
 const BgYellow = "\x1b[43m"
 
-const field_props = ['id', 'class', 'type', 'null', 'default', 'comp', 'reference', 'uppercase', 'lowercase', 'text', 'caption', 'section', 'suppresslist', 'options', 'unset', 'tips', 'tipstype', 'initialvalue', 'hidden', 'lookup', 'idsuffix', 'autobylogin', 'handlers', 'before', 'after', 'comment']
+const field_props = ['id', 'class', 'type', 'null', 'default', 'comp', 'reference', 'uppercase', 'lowercase', 'text', 'caption', 'section', 'suppresslist', 'options', 'unset', 'tips', 'tipstype', 'initialvalue', 'hidden', 'lookup', 'idsuffix', 'autobylogin', 'handlers', 'before', 'after', 'comment', 'multiline']
 const detil_props = ['table', 'form', 'headerview', 'title', 'isapprovalform', 'editorHandler', 'listHandler', 'genHandler', 'overwrite', 'tabvisible']
 
 
