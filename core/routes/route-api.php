@@ -217,7 +217,6 @@ class ApiRoute extends Route {
 				"contentoutput" => $content
 			]);
 
-
 			echo $output;
 		} catch (\Exception $ex) {
 			throw $ex;

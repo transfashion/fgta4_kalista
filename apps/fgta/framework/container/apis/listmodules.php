@@ -209,10 +209,9 @@ class ModuleShorcut extends ModuleIcon {
 	public $allowedgroups;
 	public $disabled;
 	public $variancename;
-
-	private $userdata;
-	private $modulefullname;
-	private $url_param;
+	public $userdata;
+	public $modulefullname;
+	public $url_param;
 
 	function __construct($modulefullname, $userdata, $variancename=null) {
 		$this->userdata = $userdata;
