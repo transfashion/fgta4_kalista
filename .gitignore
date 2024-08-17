@@ -6,4 +6,4 @@ vendor
 .DS_Store
 .vscode
 localsetting
-public/login-*.phtml
+public/login-*
