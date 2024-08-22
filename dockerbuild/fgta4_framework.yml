@@ -17,6 +17,7 @@ services:
       - ./docker-php-ext-xdebug.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
       - ./../:/var/www/html:consistent
       - ./../localsetting/config.php:/var/www/html/public/config.php
+      - ./../localsetting/database:/var/www/html/core/database
       - ./../../retail:/var/www/html/apps/retail
       - ./../../media:/var/www/html/apps/media
       - ./../../hrms:/var/www/html/apps/hrms
