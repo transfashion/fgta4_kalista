@@ -16,6 +16,12 @@ services:
     volumes:
       - ./docker-php-ext-xdebug.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
       - ./../:/var/www/html:consistent
+      - ./../localsetting/config.php:/var/www/html/public/config.php
+      - ./../../retail:/var/www/html/apps/retail
+      - ./../../media:/var/www/html/apps/media
+      - ./../../hrms:/var/www/html/apps/hrms
+      - ./../../crm:/var/www/html/apps/crm
+      - ./../../ent:/var/www/html/apps/ent
       - ./../../finact:/var/www/html/apps/finact
     working_dir: /var/www/html
 
