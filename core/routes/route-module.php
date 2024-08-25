@@ -107,7 +107,8 @@ class ModuleRoute extends Route {
 				WebSession::start($tokenid);
 			} else {
 				$tokenid = WebSession::start();
-				setcookie('tokenid', $tokenid, null, $reqinfo->params->cookiepath);
+				$expire = time() + (30 * 24 * 60 * 60); // 30 hari
+				setcookie('tokenid', $tokenid, $expire , $reqinfo->params->cookiepath);
 			}
 
 
