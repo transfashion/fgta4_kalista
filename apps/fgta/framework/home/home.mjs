@@ -106,13 +106,9 @@ async function removeFromFavourite(module) {
 
 
 function addToOpenedApps(module) {
-	console.log('ini dari home iframe');
-	console.log(module);
-
 	if (OPENEDMODULES.hasOwnProperty(module._id)) {
 		return;
 	}
-
 
 	let tr = document.createElement('tr');
 
