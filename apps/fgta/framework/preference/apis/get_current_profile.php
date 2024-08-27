@@ -39,6 +39,10 @@ $API = new class extends preferenceBase {
 				$stmt->execute([':user_id'=>$userdata->username]);
 				$row  = $stmt->fetch(\PDO::FETCH_ASSOC);	
 
+				$row['dept_name'] = (property_exists($userdata, 'dept_name')) ? $userdata->dept_name : '-';
+				$row['site_name'] = (property_exists($userdata, 'site_name')) ? $userdata->site_name : '-';
+				$row['empl_id'] = (property_exists($userdata, 'empl_id')) ? $userdata->empl_id : '-';
+
 
 				$sql_group = "
 					select 

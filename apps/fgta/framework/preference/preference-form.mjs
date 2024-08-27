@@ -19,6 +19,12 @@ const obj = {
 	txt_user_name: $('#pnl_form-txt_user_name'),
 	txt_user_fullname: $('#pnl_form-txt_user_fullname'),
 	txt_user_email: $('#pnl_form-txt_user_email'),
+
+	txt_user_dept_name: $('#pnl_form-txt_user_dept_name'),
+	txt_user_site_name: $('#pnl_form-txt_user_site_name'),
+	txt_user_empl_id: $('#pnl_form-txt_user_empl_id'),
+
+
 	cbo_dash_id: $('#pnl_form-cbo_dash_id'),
 	txt_password_previous: $('#pnl_form-txt_password_previous'),
 	txt_password_new: $('#pnl_form-txt_password_new'),
@@ -108,6 +114,7 @@ function btn_password_change_click() {
 		btn_picture_change.linkbutton('unselect');
 		btn_wanumber_setup.linkbutton('unselect');
 		$('#pnl_form-passwordupdate').show();
+		window.scrollTo(0, document.body.scrollHeight);
 	}
 }
 
@@ -148,8 +155,12 @@ async function getCurrentProfileData() {
 			form.setValue(obj.txt_user_name, result.userinfo.user_name);
 			form.setValue(obj.txt_user_fullname, result.userinfo.user_fullname);
 			form.setValue(obj.txt_user_email, result.userinfo.user_email);
+			form.setValue(obj.txt_user_dept_name, result.userinfo.dept_name);
+			form.setValue(obj.txt_user_site_name, result.userinfo.site_name);
+			form.setValue(obj.txt_user_empl_id, result.userinfo.empl_id);
 			form.setValue(obj.cbo_dash_id, dash_id, dash_name);
-		
+
+
 			var groupinfo = "<ul>";
 			for (var group of result.groupinfo) {
 				groupinfo += `<li>${group.group_name}</li>`;
