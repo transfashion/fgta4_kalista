@@ -167,17 +167,19 @@ class ApiRoute extends Route {
 				);
 			}
 
-			$nonce = $_SERVER['HTTP_FGTA_NONCE'];
-			if (!array_key_exists('nonces', $_SESSION)) {
-				throw new \Exception('Session expired. Nonce Error');
-			}			
+			// Cek Nonce
+			$skip_nonce_check = getenv('DEBUG')==='true'?true:false;
+			if (!$skip_nonce_check) {
+				$nonce = $_SERVER['HTTP_FGTA_NONCE'];
+				if (!array_key_exists('nonces', $_SESSION)) {
+					throw new \Exception('Session expired. Nonce Error');
+				}		
 
-			if (!array_key_exists($nonce, $_SESSION['nonces'])) {
-				throw new \Exception('Session invalid. Nonce Error');
+				if (!array_key_exists($nonce, $_SESSION['nonces'])) {
+					throw new \Exception('Session invalid. Nonce Error');
+				}
+				unset ($_SESSION['nonces'][$nonce]);
 			}
-
-			unset ($_SESSION['nonces'][$nonce]);
-
 
 			// Exekusi API
 			$API->auth = $this->auth;
