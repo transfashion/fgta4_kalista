@@ -92,6 +92,8 @@ class ApiRoute extends Route {
 				} else {
 					$x = 'sudah login';
 				}
+			} else {
+				$skip_nonce_check = true;
 			} 
 
 			if (!is_file($module_path_api)) {
@@ -159,17 +161,19 @@ class ApiRoute extends Route {
 				throw new \FGTA4\exceptions\WebException("API hanya bisa diakses via POST!", 405);
 			}
 
-			// Cek Nonce
-			if (!array_key_exists('nonces', $_SESSION)) {
-				throw new \Exception (
-					'Session Expired',
-					WEB_GENERAL_ERROR
-				);
-			}
+
+			$skip_nonce_check = $skip_nonce_check || getenv('DEBUG')==='true'?true:false;
 
 			// Cek Nonce
-			$skip_nonce_check = getenv('DEBUG')==='true'?true:false;
 			if (!$skip_nonce_check) {
+
+				if (!array_key_exists('nonces', $_SESSION)) {
+					throw new \Exception (
+						'Session Expired',
+						WEB_GENERAL_ERROR
+					);
+				}
+	
 				$nonce = $_SERVER['HTTP_FGTA_NONCE'];
 				if (!array_key_exists('nonces', $_SESSION)) {
 					throw new \Exception('Session expired. Nonce Error');
