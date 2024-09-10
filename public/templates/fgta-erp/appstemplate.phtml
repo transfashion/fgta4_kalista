@@ -7,7 +7,6 @@ use \FGTA4\setting;
 
 $_JQUERY_VERSION = "3.3.1";
 $_EASYUI_VERSION = "1.10.15";
-$_UIBASE_VERSION = "4.8.2";
 
 
 ?><!DOCTYPE HTML>
@@ -409,7 +408,9 @@ $_UIBASE_VERSION = "4.8.2";
 	<!-- Script Module <?php //echo($this->reqinfo->modulejspath) ?> -->	
 	<?php if (is_file($this->reqinfo->module_path_mjs)) { ?>
 	<script type="module">
-		import * as uibaseclass from './index.php/public/jslibs/fgta/fgta-uibase-<?=$_UIBASE_VERSION?>.js'
+
+
+		import * as uibaseclass from './index.php/asset/fgta/framework/fgta4libs/fgta4uibase.mjs'
 		import * as ui from '<?=$this->reqinfo->module_url_mjs?>';
 
 		let uibase = Object.assign({}, uibaseclass)

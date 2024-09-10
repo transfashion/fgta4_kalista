@@ -1,5 +1,5 @@
 /**
- * fgta-uibase-4.8.1.js
+ * fgta-uibase-4.8.2.js
  * fungsi-fungsi dasar dari sebuah modul
  * seluruh mjs modul fungsi dengan pengenal export
  * akan diwarisi oleh semua modul

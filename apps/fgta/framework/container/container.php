@@ -15,7 +15,7 @@ $MODULE = new class extends WebModule {
 
 
 			$this->preloadstyles = [
-				'index.php/public/jslibs/fgta/fgta-sidenav.css',
+				'index.php/asset/fgta/framework/fgta4libs/fgta4sidenav.css',
 			];
 
 

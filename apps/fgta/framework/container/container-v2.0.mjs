@@ -1,5 +1,6 @@
-import * as fgta4pageslider from '../../../../../index.php/asset/fgta/framework/fgta4libs/fgta4pageslider.mjs'
-import * as sidenav from '../../../../../index.php/public/jslibs/fgta/fgta-sidenav.mjs'
+//import * as fgta4pageslider from '../../../../../index.php/asset/fgta/framework/fgta4libs/fgta4pageslider.mjs'
+//import * as sidenav from '../../../../../index.php/public/jslibs/fgta/fgta-sidenav.mjs'
+import * as sidenav from '../../../../../index.php/asset/fgta/framework/fgta4libs/fgta4sidenav.mjs'
 
 
 // const btn_apps_back = $('#btn_apps_back')
