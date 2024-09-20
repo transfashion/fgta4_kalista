@@ -165,6 +165,11 @@ class SqlUtility {
 
 	}
 
+	public static function CreateSQLParameter($obj) {
+		
+
+	}
+
 
 	public static function LookupRow($value, $db, $tablename, $field_id=null) {
 		try {
