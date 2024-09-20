@@ -5,7 +5,8 @@
 	"allowedgroups" : ["public"],
 	"apis" : {
 		"dologin" : { "allowanonymous": true, "allowedgroups":["agung"]},
-		"testprivajax" : { "allowanonymous": false }
+		"testprivajax" : { "allowanonymous": false },
+		"walogin" : { "allowanonymous": true }
 	}
 }
 
